@@ -1,0 +1,2 @@
+name: Erwin Rosales Photography LLC
+exclude: ["node_modules", "gulpfile.js", "package.json"]
