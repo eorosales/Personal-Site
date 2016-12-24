@@ -441,10 +441,10 @@ a:link {
     margin: 20px 0;
     padding: 0 20px 0 0;
     text-align: right; }
-  .home-wrap header .site-nav li {
-    margin-bottom: 10px; }
-    .home-wrap header .site-nav li:last-child {
-      margin-bottom: 0; }
+    .home-wrap header .site-nav ul li {
+      margin-bottom: 10px; }
+      .home-wrap header .site-nav ul li:last-child {
+        margin-bottom: 0; }
   .home-wrap header .email-link {
     display: block;
     text-align: right;
@@ -465,11 +465,12 @@ a:link {
       height: 2px;
       width: 100%;
       background: #333;
-      position: relative; }
+      position: relative;
+        position-transition: all 0.3s ease-in-out; }
     .home-wrap header .mobile-nav-toggle span:before {
       top: 15px; }
     .home-wrap header .mobile-nav-toggle span:after {
-      top: -17px; }
+      bottom: 17px; }
     .home-wrap header .mobile-nav-toggle.is-open span {
       background: transparent; }
     .home-wrap header .mobile-nav-toggle.is-open span:before,
@@ -489,8 +490,8 @@ a:link {
   width: 100%;
   background: white;
   padding: 30px 0 20px;
-  -webkit-transform: translate(-100%);
-          transform: translate(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   transition: all 0.3s ease-in-out; }
   .home-wrap .mobile-nav ul {
     list-style: none;
@@ -502,7 +503,8 @@ a:link {
 
 @media (max-width: 775px) {
   .home-wrap header {
-    width: 100%;
+    outline: 1px dashed blue;
+    width: auto;
     padding: 20px 0; }
     .home-wrap header .header-position {
       width: auto;
@@ -512,8 +514,6 @@ a:link {
       left: auto;
       -ms-flex-direction: row;
           flex-direction: row;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
       -ms-flex-align: center;
           align-items: center; }
     .home-wrap header .site-nav,
@@ -526,14 +526,13 @@ a:link {
       display: flex; }
   .home-wrap .mobile-nav.is-open {
     display: block;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 .home-wrap {
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh; }
-
-@meda (max-width: 775px) {
-  .home-wrap {
-    display: block; } }
+  @media (max-width: 775px) {
+    .home-wrap {
+      display: block; } }

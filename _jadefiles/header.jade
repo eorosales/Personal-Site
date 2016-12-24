@@ -4,18 +4,19 @@ mixin nav-content()
     li: a(href="#about") About
     li: a(href="#contact") Contact
     li: a(href="#blog") Blog
-      
 
 .mobile-nav
   +nav-content()
+
 
 header
   .header-position
     h1.logo Erwin Rosales
     
-    nav.site-nav 
+    nav.site-nav
       +nav-content()
+    
         
     a(href="mailto:photography@erwinrosales.com").email-link +email me
-
+    
     .mobile-nav-toggle: span
